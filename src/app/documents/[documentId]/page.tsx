@@ -8,7 +8,7 @@ interface Props {
 }
 
 const DocumentIDPage = async ({ params }: Props) => {
-  const { documentId } = await params;
+  // const { documentId } = await params;
   return (
     <div className="min-h-screen bg-[#fafbfd]">
       <Editor />
