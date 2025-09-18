@@ -1,5 +1,6 @@
 import React from "react";
 import { Editor } from "./editor";
+import { Toolbar } from "./toolbar";
 
 interface Props {
   params: Promise<{
@@ -11,6 +12,7 @@ const DocumentIDPage = async ({ params }: Props) => {
   // const { documentId } = await params;
   return (
     <div className="min-h-screen bg-[#fafbfd]">
+      <Toolbar />
       <Editor />
     </div>
   );
