@@ -11,8 +11,10 @@ import TableRow from "@tiptap/extension-table-row";
 import Image from "@tiptap/extension-image";
 import ImageResize from "tiptap-extension-resize-image";
 import Underline from "@tiptap/extension-underline";
-
+import FontFamily from "@tiptap/extension-font-family";
 import StarterKit from "@tiptap/starter-kit";
+import TextStyle from "@tiptap/extension-text-style";
+
 import { useEditorStore } from "@/store/use-editor-store";
 
 export const Editor = () => {
@@ -51,6 +53,8 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      FontFamily,
+      TextStyle,
       Underline,
       TaskList,
       TaskItem.configure({ nested: true }),
@@ -64,22 +68,15 @@ export const Editor = () => {
       TableHeader,
       TableCell,
     ],
-    content: `        
-    <table>
-          <tbody>
-            <tr>
-              <th>Name</th>
-              <th colspan="3">Description</th>
-            </tr>
-            <tr>
-              <td>Cyndi Lauper</td>
-              <td>Singer</td>
-              <td>Songwriter</td>
-              <td>Actress</td>
-            </tr>
-          </tbody>
-        </table>
-`,
+    content: `
+ <p><span style="font-family: Inter">Did you know that Inter is a really nice font for interfaces?</span></p>
+        <p><span style="font-family: Comic Sans MS, Comic Sans">It doesn’t look as professional as Comic Sans.</span></p>
+        <p><span style="font-family: serif">Serious people use serif fonts anyway.</span></p>
+        <p><span style="font-family: monospace">The cool kids can apply monospace fonts aswell.</span></p>
+        <p><span style="font-family: cursive">But hopefully we all can agree, that cursive fonts are the best.</span></p>
+        <p><span style="font-family: var(--title-font-family)">Then there are CSS variables, the new hotness.</span></p>
+        <p><span style="font-family: 'Exo 2'">TipTap even can handle exotic fonts as Exo 2.</span></p>
+      `,
     immediatelyRender: false,
   });
 
