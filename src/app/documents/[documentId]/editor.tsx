@@ -20,6 +20,7 @@ import Link from "@tiptap/extension-link";
 import TextAlign from "@tiptap/extension-text-align";
 
 import { useEditorStore } from "@/store/use-editor-store";
+import { FontSizeExtension } from "@/extensions/font-size";
 
 export const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -61,6 +62,7 @@ export const Editor = () => {
         types: ["heading", "paragraph"],
       }),
       FontFamily,
+      FontSizeExtension,
       Color,
       Link.configure({
         autolink: true,
