@@ -16,6 +16,7 @@ import StarterKit from "@tiptap/starter-kit";
 import { Color } from "@tiptap/extension-color";
 import TextStyle from "@tiptap/extension-text-style";
 import Highlight from "@tiptap/extension-highlight";
+import Link from "@tiptap/extension-link";
 
 import { useEditorStore } from "@/store/use-editor-store";
 
@@ -57,6 +58,11 @@ export const Editor = () => {
       StarterKit,
       FontFamily,
       Color,
+      Link.configure({
+        autolink: true,
+        openOnClick: false,
+        defaultProtocol: "https",
+      }),
       Highlight.configure({
         multicolor: true,
       }),
