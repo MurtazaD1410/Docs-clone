@@ -10,6 +10,8 @@ interface Props {
 
 const DocumentIDPage = async ({ params }: Props) => {
   // const { documentId } = await params;
+  console.log(params);
+
   return (
     <div className="min-h-screen bg-[#fafbfd]">
       <Toolbar />

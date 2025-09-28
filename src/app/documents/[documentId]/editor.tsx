@@ -22,6 +22,7 @@ import TextAlign from "@tiptap/extension-text-align";
 import { useEditorStore } from "@/store/use-editor-store";
 import { FontSizeExtension } from "@/extensions/font-size";
 import { LineHeightExtension } from "@/extensions/line-height";
+import { Ruler } from "./ruler";
 
 export const Editor = () => {
   const { setEditor } = useEditorStore();
@@ -92,19 +93,16 @@ export const Editor = () => {
       TableCell,
     ],
     content: `
- <p><span style="font-family: Inter">Did you know that Inter is a really nice font for interfaces?</span></p>
-        <p><span style="font-family: Comic Sans MS, Comic Sans">It doesn’t look as professional as Comic Sans.</span></p>
-        <p><span style="font-family: serif">Serious people use serif fonts anyway.</span></p>
-        <p><span style="font-family: monospace">The cool kids can apply monospace fonts aswell.</span></p>
-        <p><span style="font-family: cursive">But hopefully we all can agree, that cursive fonts are the best.</span></p>
-        <p><span style="font-family: var(--title-font-family)">Then there are CSS variables, the new hotness.</span></p>
-        <p><span style="font-family: 'Exo 2'">TipTap even can handle exotic fonts as Exo 2.</span></p>
+ <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea obcaecati aspernatur itaque aliquam ratione fuga excepturi accusantium est distinctio fugit consequuntur, beatae, magni voluptate nobis! Labore eos veniam, ipsum laboriosam sunt odit tempora nobis nostrum voluptates sit amet minima ut! Reprehenderit voluptate nam adipisci unde eum suscipit et sunt dolorem praesentium aut corporis distinctio at, numquam, rerum vitae excepturi earum soluta dignissimos autem quas. Voluptates, ipsum assumenda quo corporis ut veritatis provident maxime. Delectus vel aliquid ipsum aspernatur placeat laboriosam consequuntur a sit quam impedit, odit est voluptas fugit ad voluptatem magnam vitae! Totam reiciendis nobis magnam magni, expedita vitae.
+ </p>
       `,
     immediatelyRender: false,
   });
 
   return (
     <div className="size-full overflow-x-auto bg-[#f9fbfd] px-4 print:p-0 print:bg-white print:overflow-visible">
+      <Ruler />
       <div className="min-w-max flex justify-center w-[816px] py-4 print:py-0 mx-auto print:w-full print:min-w-0">
         <EditorContent editor={editor} />
       </div>
