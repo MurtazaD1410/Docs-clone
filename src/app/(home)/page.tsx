@@ -3,15 +3,19 @@
 import React from "react";
 import { Navbar } from "./navbar";
 import { TemplateGallery } from "./template-gallery";
-import { useQuery } from "convex/react";
+import { usePaginatedQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
+import { FullscreenLoader } from "@/components/fullscreen-loader";
+import { DocumentsTable } from "./documents-table";
+import { useSearchParam } from "@/hooks/use-search-param";
 
 const Home = () => {
-  const documents = useQuery(api.documents.get);
-
-  if (documents === undefined) {
-    return <p>Loading...</p>;
-  }
+  const [search] = useSearchParam("search");
+  const { isLoading, loadMore, results, status } = usePaginatedQuery(
+    api.documents.get,
+    { search },
+    { initialNumItems: 5 }
+  );
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -20,9 +24,12 @@ const Home = () => {
       </div>
       <div className="mt-16">
         <TemplateGallery />
-        {documents?.map((document) => {
-          return <span key={document._id}>{document.title}</span>;
-        })}
+        <DocumentsTable
+          loadMore={loadMore}
+          documents={results}
+          status={status}
+          isLoading={isLoading}
+        />
       </div>
     </div>
   );

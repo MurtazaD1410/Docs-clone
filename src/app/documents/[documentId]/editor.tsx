@@ -92,11 +92,7 @@ export const Editor = () => {
       TableHeader,
       TableCell,
     ],
-    content: `
- <p>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea obcaecati aspernatur itaque aliquam ratione fuga excepturi accusantium est distinctio fugit consequuntur, beatae, magni voluptate nobis! Labore eos veniam, ipsum laboriosam sunt odit tempora nobis nostrum voluptates sit amet minima ut! Reprehenderit voluptate nam adipisci unde eum suscipit et sunt dolorem praesentium aut corporis distinctio at, numquam, rerum vitae excepturi earum soluta dignissimos autem quas. Voluptates, ipsum assumenda quo corporis ut veritatis provident maxime. Delectus vel aliquid ipsum aspernatur placeat laboriosam consequuntur a sit quam impedit, odit est voluptas fugit ad voluptatem magnam vitae! Totam reiciendis nobis magnam magni, expedita vitae.
- </p>
-      `,
+    content: "",
     immediatelyRender: false,
   });
 
