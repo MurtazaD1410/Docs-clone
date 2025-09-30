@@ -43,8 +43,6 @@ export const get = query({
       | string
       | undefined;
 
-    console.log(user);
-
     if (search && organizationId) {
       return await ctx.db
         .query("documents")
@@ -101,7 +99,9 @@ export const removeById = mutation({
       | undefined;
 
     const isOwner = document?.ownerId === user.subject;
-    const isOrgMember = document?.organizationId === organizationId;
+    const isOrgMember = !!(
+      document.organizationId && document?.organizationId === organizationId
+    );
     const isOrgAdmin = user.organization_role === "org:admin";
 
     if (!isOwner && !(isOrgAdmin && isOrgMember)) {
@@ -135,7 +135,9 @@ export const updateById = mutation({
       | undefined;
 
     const isOwner = document?.ownerId === user.subject;
-    const isOrgMember = document?.organizationId === organizationId;
+    const isOrgMember = !!(
+      document.organizationId && document?.organizationId === organizationId
+    );
     const isOrgAdmin = user.organization_role === "org:admin";
 
     if (!isOwner && !(isOrgAdmin && isOrgMember)) {
@@ -143,5 +145,14 @@ export const updateById = mutation({
     }
 
     return await ctx.db.patch(args.id, { title: args.title });
+  },
+});
+
+export const getById = query({
+  args: { id: v.id("documents") },
+  handler: async (ctx, { id }) => {
+    const document = await ctx.db.get(id);
+
+    return document;
   },
 });
