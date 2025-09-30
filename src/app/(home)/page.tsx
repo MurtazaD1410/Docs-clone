@@ -5,7 +5,6 @@ import { Navbar } from "./navbar";
 import { TemplateGallery } from "./template-gallery";
 import { usePaginatedQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
-import { FullscreenLoader } from "@/components/fullscreen-loader";
 import { DocumentsTable } from "./documents-table";
 import { useSearchParam } from "@/hooks/use-search-param";
 

@@ -5,7 +5,6 @@ import React from "react";
 import { Doc } from "../../../convex/_generated/dataModel";
 import { Building2Icon, CircleUserIcon } from "lucide-react";
 import { format } from "date-fns";
-import { Button } from "@/components/ui/button";
 import { DocumentMenu } from "./document-menu";
 import { useRouter } from "next/navigation";
 
