@@ -1,8 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Docs Clone
 
-## Getting Started
+A modern, collaborative document editor inspired by Google Docs. Built with Next.js 15, React 19, and TypeScript — featuring real-time collaboration, rich text editing, and seamless document management for teams and individuals.
 
-First, run the development server:
+
+## ✨ Features
+
+* **Real-Time Collaboration**: Multiple users can edit the same document at the same time.
+* **Rich Text Editing**: Headings, bold, italic, underline, lists, links, and more.
+* **Extenstions**: Tables, Images, and more.
+* **Comments and Annotations**: Real time comments and annotations in the document.
+* **Notification**: Notifications for mentions.
+* **Template Gallery**: Choose a document from template gallery with predefined initial content.
+* **Downloading**: Multiple doucument downloading formats like JSON, HTML, pdf and txt.
+* **Document Management**: Create, rename and delete documents.
+* **Auto-Save**: Changes are saved automatically as you type.
+* **Organizations**: Sharing documents between all members of the organization.
+* **Responsive UI**: Works across desktop, tablet, and mobile.
+* **Authentication**: Secure account-based access (Clerk).
+* **Version History**: Track changes and restore previous versions.
+* **Sharing & Permissions**: Invite collaborators with view/edit permissions.
+
+
+## 🚀 Tech Stack
+
+* **Frontend**: Next.js 15, React 19, TypeScript
+* **Styling**: Tailwind CSS
+* **Editor**: Tiptap
+* **Backend / Database**: Convex
+* **Real-time Collaboration**: Liveblocks
+* **Authentication**: Clerk
+
+
+## 📦 Installation
+
+### Prerequisites
+
+* Node.js 18+
+* npm, yarn, pnpm, or bun
+* Convex account and project (if using Convex)
+* Clerk account (if using Clerk for auth)
+* Liveblocks account (for real-time features)
+
+### Setup
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/MurtazaD1410/Docs-clone.git
+cd Docs-clone
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+3. **Environment configuration**
+
+Copy the example environment file and update it with your keys:
+
+```bash
+cp .env.example .env.local
+```
+
+Then open `.env.local` and update the values. Example:
+
+```env
+# Convex Backend
+CONVEX_DEPLOYMENT="your_convex_deployment_name"
+NEXT_PUBLIC_CONVEX_URL="your_convex_url"
+
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="your_clerk_publishable_key"
+CLERK_SECRET_KEY="your_clerk_secret_key"
+
+# Liveblocks Real-time Collaboration
+LIVEBLOCKS_SECRET_KEY="your_liveblocks_secret_key"
+```
+
+4. **Convex setup** (if applicable)
+
+```bash
+# Install Convex CLI globally (if not installed)
+npm install -g convex
+
+# Login to Convex
+npx convex login
+
+# Start Convex dev
+npx convex dev
+```
+
+5. **Clerk configuration** (if applicable)
+
+* Configure sign-in/sign-up flows on the Clerk dashboard.
+* Add OAuth providers (Google, GitHub, etc.) if desired.
+* Add your callback URLs and webhook endpoints.
+
+6. **Liveblocks setup**
+
+* Create a Liveblocks project and obtain the secret key.
+* Configure rooms, presence, and permissions as needed.
+* Integrate Liveblocks authentication with Clerk (or your auth provider).
+
+7. **Run the development server**
 
 ```bash
 npm run dev
@@ -14,23 +122,11 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+8. **Open your browser**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⭐ If you found this project helpful, please give it a star on GitHub!
