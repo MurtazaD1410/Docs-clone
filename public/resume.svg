@@ -1,50 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 517">
-  <!-- White Background -->
-  <rect width="400" height="517" fill="white" />
+<!-- resume.svg -->
+<svg width="200" height="280" viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="280" rx="4" fill="white" />
+  <rect x="1" y="1" width="198" height="278" rx="3" stroke="#E5E7EB" stroke-width="2" />
 
-  <!-- Header Section -->
-  <text x="40" y="40" font-family="Arial, sans-serif" font-size="14" fill="#FF0000"
-    font-weight="bold">Hello,</text>
-  <text x="40" y="70" font-family="Arial, sans-serif" font-size="18" font-weight="bold">I'm Your
-    Name</text>
+  <!-- Header -->
+  <rect x="20" y="20" width="110" height="8" rx="4" fill="#0EA5E9" />
+  <rect x="20" y="33" width="150" height="3" rx="1.5" fill="#6B7280" />
 
-  <!-- Contact Info -->
-  <text x="40" y="100" font-family="Arial, sans-serif" font-size="11">123 YOUR STREET</text>
-  <text x="40" y="115" font-family="Arial, sans-serif" font-size="11">YOUR CITY, ST 12345</text>
-  <text x="40" y="130" font-family="Arial, sans-serif" font-size="11">TEL: 555.555.5555</text>
-  <text x="40" y="145" font-family="Arial, sans-serif" font-size="11">YOU.REPLY@EXAMPLE.COM</text>
+  <!-- Section 1 -->
+  <rect x="20" y="52" width="100" height="5" rx="2.5" fill="#1F2937" />
+  <rect x="20" y="64" width="160" height="2" rx="1" fill="#D1D5DB" />
+  <rect x="20" y="70" width="160" height="2" rx="1" fill="#D1D5DB" />
+  <rect x="20" y="76" width="140" height="2" rx="1" fill="#D1D5DB" />
 
-  <!-- Skills Section -->
-  <text x="40" y="190" font-family="Arial, sans-serif" font-size="14" fill="#FF0000"
-    font-weight="bold">Skills</text>
-  <text x="40" y="210" font-family="Arial, sans-serif" font-size="11">Skills description here. Core
-    competencies and key abilities.</text>
+  <!-- Experience -->
+  <rect x="20" y="92" width="80" height="5" rx="2.5" fill="#1F2937" />
 
-  <!-- Experience Section -->
-  <text x="40" y="250" font-family="Arial, sans-serif" font-size="14" fill="#FF0000"
-    font-weight="bold">Experience</text>
+  <rect x="20" y="105" width="90" height="4" rx="2" fill="#0EA5E9" opacity="0.8" />
+  <rect x="20" y="112" width="100" height="2" rx="1" fill="#6B7280" />
+  <circle cx="25" cy="122" r="1.5" fill="#0EA5E9" />
+  <rect x="30" y="120" width="140" height="2" rx="1" fill="#D1D5DB" />
+  <circle cx="25" cy="129" r="1.5" fill="#0EA5E9" />
+  <rect x="30" y="127" width="130" height="2" rx="1" fill="#D1D5DB" />
+  <circle cx="25" cy="136" r="1.5" fill="#0EA5E9" />
+  <rect x="30" y="134" width="145" height="2" rx="1" fill="#D1D5DB" />
 
-  <!-- Job Entries -->
-  <text x="40" y="280" font-family="Arial, sans-serif" font-size="10" fill="#666666">MONTH 20XX –
-    MONTH 20YY</text>
-  <text x="40" y="295" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Company
-    Name, Location</text>
-  <text x="180" y="295" font-family="Arial, sans-serif" font-size="12"> — Job Title</text>
+  <rect x="20" y="148" width="85" height="4" rx="2" fill="#0EA5E9" opacity="0.8" />
+  <rect x="20" y="155" width="95" height="2" rx="1" fill="#6B7280" />
+  <circle cx="25" cy="165" r="1.5" fill="#0EA5E9" />
+  <rect x="30" y="163" width="135" height="2" rx="1" fill="#D1D5DB" />
+  <circle cx="25" cy="172" r="1.5" fill="#0EA5E9" />
+  <rect x="30" y="170" width="140" height="2" rx="1" fill="#D1D5DB" />
 
-  <!-- Job Details -->
-  <circle cx="50" cy="315" r="2" fill="#000000" />
-  <text x="60" y="320" font-family="Arial, sans-serif" font-size="11">Key responsibility or
-    achievement</text>
+  <!-- Education -->
+  <rect x="20" y="188" width="65" height="5" rx="2.5" fill="#1F2937" />
+  <rect x="20" y="200" width="80" height="4" rx="2" fill="#0EA5E9" opacity="0.8" />
+  <rect x="20" y="207" width="100" height="2" rx="1" fill="#6B7280" />
 
-  <!-- Education Section -->
-  <text x="40" y="400" font-family="Arial, sans-serif" font-size="14" fill="#FF0000"
-    font-weight="bold">Education</text>
-  <text x="40" y="430" font-family="Arial, sans-serif" font-size="12" font-weight="bold">College
-    Name, Location — Degree</text>
-
-  <!-- Awards Section -->
-  <text x="40" y="480" font-family="Arial, sans-serif" font-size="14" fill="#FF0000"
-    font-weight="bold">Awards</text>
-  <text x="40" y="500" font-family="Arial, sans-serif" font-size="11">Notable achievement or
-    recognition.</text>
+  <!-- Skills -->
+  <rect x="20" y="223" width="40" height="5" rx="2.5" fill="#1F2937" />
+  <rect x="20" y="235" width="50" height="4" rx="2" fill="#0EA5E9" opacity="0.3" />
+  <rect x="75" y="235" width="55" height="4" rx="2" fill="#0EA5E9" opacity="0.3" />
+  <rect x="135" y="235" width="45" height="4" rx="2" fill="#0EA5E9" opacity="0.3" />
+  <rect x="20" y="243" width="60" height="4" rx="2" fill="#0EA5E9" opacity="0.3" />
+  <rect x="85" y="243" width="50" height="4" rx="2" fill="#0EA5E9" opacity="0.3" />
+  <rect x="140" y="243" width="40" height="4" rx="2" fill="#0EA5E9" opacity="0.3" />
 </svg>

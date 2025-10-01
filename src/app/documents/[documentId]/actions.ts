@@ -12,6 +12,10 @@ export async function getUsers() {
 
   const clerk = await clerkClient();
 
+  if (!sessionClaims?.o) return [];
+
+  console.log("called");
+
   const response = await clerk.users.getUserList({
     // @ts-expect-error dontknow
     organizationId: [sessionClaims?.o.id as string],
@@ -22,6 +26,7 @@ export async function getUsers() {
     name:
       user.fullName ?? user.primaryEmailAddress?.emailAddress ?? "Anonymous",
     avatar: user.imageUrl,
+    color: "",
   }));
 
   return users;
