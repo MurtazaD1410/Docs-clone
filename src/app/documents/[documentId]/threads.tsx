@@ -19,7 +19,7 @@ export function Threads({ editor }: { editor: Editor | null }) {
         threads={threads}
         className="floating-threads"
       />
-      <FloatingComposer editor={editor} className="floating-composer" />
+      <FloatingComposer editor={editor} className="floating-composer z-50" />
     </>
   );
 }
